@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>텍스트를 이미지로!</title>
+    <!-- 1. 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 2. html2canvas 라이브러리 불러오기 (마법의 도구) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>텍스트를 이미지로 변환하기 🎨</h1>
+        <p class="description">아래 상자에 텍스트를 입력하고 버튼을 눌러보세요!</p>
+
+        <textarea id="text-input" placeholder="여기에 변환할 텍스트를 입력..."></textarea>
+        
+        <h2>미리보기</h2>
+        <!-- 이 DIV 영역이 이미지로 변환됩니다 -->
+        <div id="image-area">
+            여기에 텍스트가 표시됩니다.
+        </div>
+
+        <button id="generate-btn">✨ 이미지 생성!</button>
+        <a id="download-link" class="hidden">⬇️ 이미지 다운로드</a>
+    </div>
+    
+    <!-- 3. 우리 자바스크립트 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
