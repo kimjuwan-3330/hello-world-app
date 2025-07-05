@@ -4,12 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const downloadLink = document.getElementById('download-link');
 
-    textInput.addEventListener('input', () => {
-        imageArea.textContent = textInput.value || "여기에 텍스트가 표시됩니다.";
-    });
-
     generateBtn.addEventListener('click', () => {
+        imageArea.textContent = textInput.value || "여기에 텍스트가 표시됩니다.";
+
         html2canvas(imageArea).then(canvas => {
+            // 기존 내용 제거
+            imageArea.innerHTML = '';
+
+            // 캡처된 이미지 화면에 표시
+            imageArea.appendChild(canvas);
+
+            // 다운로드 링크 설정
             const image = canvas.toDataURL("image/png");
             downloadLink.href = image;
             downloadLink.download = "text-image.png";
