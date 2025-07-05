@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>텍스트를 이미지로!</title>
-    <!-- 1. 스타일시트 연결 -->
+    <!-- 스타일시트 연결 -->
     <link rel="stylesheet" href="style.css">
-    <!-- 2. html2canvas 라이브러리 불러오기 (마법의 도구) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,7 +14,6 @@
         <textarea id="text-input" placeholder="여기에 변환할 텍스트를 입력..."></textarea>
         
         <h2>미리보기</h2>
-        <!-- 이 DIV 영역이 이미지로 변환됩니다 -->
         <div id="image-area">
             여기에 텍스트가 표시됩니다.
         </div>
@@ -25,7 +22,12 @@
         <a id="download-link" class="hidden">⬇️ 이미지 다운로드</a>
     </div>
     
-    <!-- 3. 우리 자바스크립트 파일 연결 -->
+    <!-- ★★★ 모든 스크립트들을 body 태그가 닫히기 바로 전에 배치 ★★★ -->
+    
+    <!-- 1. html2canvas 라이브러리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- 2. 우리의 script.js 파일 불러오기 -->
     <script src="script.js"></script>
 </body>
 </html>
